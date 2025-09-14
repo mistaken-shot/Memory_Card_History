@@ -76,7 +76,7 @@ function show_card(){
     console.log(system_type);
  if (c && system_type === "1") {
         document.getElementById("output").innerHTML = 
-            `ID: ${c.card_id}<br>Question: ${c.name}<br>Answer: ????/??/??`;
+            `ID: ${c.card_id}<br>Question: ${c.name}<br>Answer: ????-??-??`;
     } else if(c && system_type==="0"){
         document.getElementById("output").innerHTML = 
             `ID: ${c.card_id}<br>Question: ${c.name}<br>Answer: ${c.answer}`;
