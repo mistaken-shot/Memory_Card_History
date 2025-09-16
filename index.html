@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card</title>
+  <style>
+    body {
+     background-image: url("https://images.unsplash.com/photo-1757137911040-c9d81879b212?q=80&w=1680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;     /* 화면에 꽉 차게 */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    h1 {
+        font-size: 70px;         /* 글자 크기 */
+        color: rgb(132, 52, 3);             /* 글자 색상 */
+        font-family: "Times New Roman", Times, serif; /* 글꼴 */
+        margin-bottom: 20px;     /* 아래 여백 */
+    }
+    #output {
+        width: 400px;            /* 박스 가로 크기 */
+        height: 100px;           /* 박스 세로 크기 */
+        border: 2px solid black; /* 테두리 */
+        background-color: #f5f5f5; /* 배경색 */
+        color: darkred;          /* 글자 색상 */
+        font-size: 18px;         /* 글자 크기 */
+        font-family: "Courier New", monospace; /* 글꼴 */
+        padding: 10px;           /* 안쪽 여백 */
+        text-align: center;      /* 텍스트 가로 중앙 정렬 */
+        display: flex;           /* flex 사용 */
+        justify-content: center; /* 수평 중앙 */
+        align-items: center;     /* 수직 중앙 */
+        overflow-y: auto;        /* 내용 많으면 스크롤 */
+        margin-left: auto;       /*왼쪽 여백*/
+        margin-right: auto;      /*오른쪽 여백*/
+    }
+    body {
+      display: flex;
+      justify-content: center; /* 가로 중앙 */
+      height: 100vh;           /* 화면 전체 높이 */
+      margin: 0;
+    }
+    .container {
+      text-align: center; /* 내부 텍스트/버튼 중앙 정렬 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <br><br>
+    <h1>Memory_Card</h1>
+    <label><input type="radio" name="difficulty_edit" value="easy"> <span style="color:rgba(26, 255, 0, 0.559);">Easy</span></label>
+    <label><input type="radio" name="difficulty_edit" value="medium" checked> <span style="color:rgba(255, 251, 0, 0.712);">Medium</span></label>
+    <label><input type="radio" name="difficulty_edit" value="hard"> <span style="color:rgba(255, 0, 0, 0.696);">Hard</span></label>
+    <button id="applyDifficulty">난이도 적용</button>
+    <br><br>
+    난이도 모드:
+    <label><input type="radio" name="difficulty_mode" value="all" checked> 전체</label>
+    <label><input type="radio" name="difficulty_mode" value="easy"> <span style="color:rgba(26, 255, 0, 0.559);">Easy</span></label>
+    <label><input type="radio" name="difficulty_mode" value="medium"> <span style="color:rgba(255, 251, 0, 0.712);">Medium</span></label>
+    <label><input type="radio" name="difficulty_mode" value="hard"> <span style="color:rgba(255, 0, 0, 0.696);">Hard</span></label>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div id="output"></div>
+    <input type="radio" id="system_type_edit" name="system" value="0" checked>answer
+    <input type="radio" id="system_type_question" name="system" value="1">question
+    <br><br>
+    카드번호<input type="number" id="number" name="number" size="20">
+    <button id="random">랜덤</button><br><br>
+    <button id="show_card">카드출력</button><br><br>
+    답<input type="text" id="guess" name="guess" size="20">   <button id="showanswer">정답</button><br><br>
+    <button id="rightorwrong">확인</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
